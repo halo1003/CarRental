@@ -1,0 +1,546 @@
+html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+@font-face{
+    font-family: font1;
+    src: url(fonts-folder/20db-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: font2;
+    src: url(fonts-folder/aaargh-webfont.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: font3;
+    src: url(fonts-folder/greatvibes-regular-webfont.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+.font1{
+    font-family: font1;
+}
+.font2{
+    font-family: font2;
+}
+.font3{
+    font-family: font3;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+   
+    background-image: url("background/car4.jpg");    
+}
+.button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.buttonLogin{
+    width: 70px;
+    height: 30px;
+    margin-right: 20px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: font2;
+}
+.buttonColor{
+    background-color: palevioletred;
+    color: white;
+}
+.buttonColor:hover {
+    background-color: #555555;
+    color: white;
+}
+.buttonBlack{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.buttonBlack:hover {
+    background-color: #555555;
+    color: white;
+}
+.buttonBlack1{
+    background-color: white;
+    color: black;
+}
+
+.buttonBlack1:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.buttonPink{
+    background-color: palevioletred;
+    color: white;
+    border: 2px solid #3a3939;
+}
+.buttonPink:hover {
+    background-color: #555555;
+    color: white;
+}
+.removeSpace{
+    font-size: 0;
+}
+.adCover{
+    width: 100%;
+    background-color: yellow;
+}
+.welcomeAd{
+    font-size: 50px;
+    margin-left: 20px;
+}
+.adBody{
+    width: 100%;
+}
+.adOptions{
+    width: 200px;
+    position: fixed;
+    margin-left: 10px;
+}
+.showOption{
+    width: 900px;
+    margin-left: 240px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.adOption{
+    vertical-align: top;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 2px;
+    color: white;
+    font-size: 25px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    text-align: center;
+    font-family: font2;
+}
+.historys{
+    width: 100%;
+    margin-top: 5px;
+}
+.history{
+    background-color: white;
+    font-size: 15px;
+    font-family: font2;
+    border: 1px;
+    border-style: solid;
+    border-radius: 0.5px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+.headerHistory{
+    font-weight: bold;
+    background-color: palevioletred;
+}
+.optionHeader1{
+    font-weight: bold;
+    margin-right: 20px;
+}
+.optionHeader2{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.historyName{
+    width: 160px;
+}
+.historyTime{
+    width: 160px;
+}
+.customerAdmin{
+    width: 130px;
+}
+.historyPayment{
+    width: 120px;
+}
+.showCarAdmin{
+    width: 90px;
+}
+.tableCarList{
+    width: 100px;
+}
+.tableCarList1{
+    width: 50px;
+}
+.tableCarList2{
+    width: 70px;
+}
+.tableCarListName{
+    width: 180px;
+}
+.formEdit{
+    background-color: rgba(0,0,0,0.8);
+    font-size: 20px;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: solid 5px;
+}
+.formRegister{
+        background-color: rgba(0,0,0,0.8);
+    font-size: 20px;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: solid 5px;
+    margin-top: 80px;
+}
+.formEditCustomer{
+    background-color: rgba(0,0,0,0.8);
+    font-size: 20px;
+    width: 450px;
+    padding: 20px;
+    border: solid 5px;
+}
+.formAddCar{
+    font-size: 20px;
+}
+.headerEdit{
+    display: inline-block;
+    font-size: 20px;
+    font-family: font2;
+    width: 100%;
+    margin-bottom: 5px;
+    border: 2px solid;
+    background-color: rgb(203, 254, 248)
+}
+.rowEdit{
+
+}
+.valueEdit{
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: font2;
+    width: 100%
+}
+.buttonEdit{
+    margin-top: 10px;
+    font-size: 0;
+}
+.buttonEdit1{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    border: 2px solid;
+}
+.buttonEdit2{
+    border: 2px solid;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.col1{
+    width: 29%;
+    display: inline-block;
+    text-align: center;
+}
+.col2{
+    width: 69%;
+    display: inline-block;
+    margin-left: 5px;
+}
+.inputEdit{
+    width: 100%;
+}
+input.editCarBlank{
+    border: 2px solid;
+    width: 100%;
+    background-color: rgb(240, 255, 252)
+}
+.editHeader{
+    font-family: font1;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.col1Register{
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+.col2Register{
+    width: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+.sameAccount {
+    display: inline-block;
+    font-size: 10px;
+    font-family: font2;
+    width: 100%;
+    margin-bottom: 5px;
+    color: red;
+}
+.topHome{
+    width: 100%;
+    font-size: 0px;
+    background-color: rgb(219, 112, 147);
+}
+.topHomeL{
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+.topHomeL p{
+    font-size: 35px;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    font-family: font3;
+}
+.topHomeR{
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    
+}
+.topHomeR p{
+    font-size: 30px;
+    color: red;
+    margin-right: 20px;
+    font-family: font2;
+}
+.optionHome{
+    margin-top: 20px;
+    width: 100%;
+}
+.optionL{
+    width: 150px;
+    position: fixed;
+}
+.optionLHeader{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    margin-left: 5px;
+    font-family: font1;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    
+}
+.optionLHeaderBlank{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+    margin-left: 5px;
+    font-family: font2;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    
+}
+.optionLHeaderSearch{
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+    margin-left: 5px;
+    font-family: font3;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+.optionR{
+    width: 80%;
+    margin-left: 170px;
+    vertical-align: top;
+    font-size: 0;
+    margin-bottom: 40px;
+}
+.buttonHome{
+    height: 100%;
+    border: none;
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.0);
+}
+.buttonBlackHome{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.buttonBlackHome:hover {
+    background-color: #555555;
+    color: white;
+}
+.formCar{
+    width: 500px;
+    font-size: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.8);
+}
+.formCarL{
+    width: 40%;
+    display: inline-block;
+    
+}
+.formCarR{
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+.stars{
+    text-align: center;
+    font-size: 0;
+    height: 30px;
+    width: 100%;
+    background-color: blue;
+}
+.carImg{
+    width: 100%;
+    height: 140px;
+}
+.imgCar{
+    height: 100%;
+    width: 100%;
+}
+.like{
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    height: 100%;
+}
+.likeButton{
+    border: none;
+    background-color: pink;
+    text-align: left;
+    font-size: 20px;
+    height: 30px;
+    font-family: font2;
+}
+.dislike{
+    height: 100%;
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+.dislikeButton{
+    border: none;
+    background-color: gray;
+    text-align: right;
+    font-size: 20px;
+    height: 30px;
+    font-family: font2;
+}
+.carInfo{
+    height: 170px;
+    color: white;
+    
+}
+.carInfo p{
+    font-family: font2;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.carInfo pHeader{
+    font-family: font1;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.carPrice{
+    width: 35%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    font-family: font1;
+    color: #00f1ff;
+    margin-left: 5px;
+}
+.carDiscount{
+    width: 35%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    font-family: font1;
+    color: palevioletred;
+}
+.rentButton{
+    width: 28.3%;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+
+}
+.rentButtonn{
+    font-size: 15px;
+    color: #fb0707;
+    width: 100%;
+    height: 30px;
+    font-family: font1;
+}
+.searchBlank{
+    width: 100%;
+    height: 100%;
+}
+.divID{
+    width: 50px;
+}
+.contact{
+    width: 500px;;
+    margin-left: 170px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    margin-bottom: 20px;
+}
+.divContactL{
+    display: inline-block;
+}
+.divContactL p{
+    font-weight: bold; 
+    font-size: 15px;
+    font-family: font2;
+}
+.divContactR{
+    display: inline-block;
+}
+.divContactR p{
+    font-size: 15px;
+    font-family: font3;
+    font-weight: bold;
+}
