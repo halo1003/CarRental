@@ -218,27 +218,6 @@
         <%
             String check = (String) session.getAttribute("checkAccount");
         %>
-
-        <!--<div style="text-align: center; width: 300px; margin: auto;">
-            <div>Login page</div>
-            <form method="post" action="check" name="myForm" onsubmit="return checkInput()">
-                <table>
-                    <tr><td>UserName<td><input type="text" name="username" value="lythanhhuy">
-                    <tr><td>PassWord<td><input type="password" name="password" value="123456">
-        <% /* if (check == null || check.equals("")) {
-
-            } else if (check.equals("wrongUsername")) {
-                out.print("<tr><td>Username not exist, Register for login<td>");
-            } else if (check.equals("wrongPass")) {
-                out.print("<tr><td>Password incorrect!<td>");
-            }
-            session.setAttribute("checkAccount", "");*/
-        %>
-<tr><td><input type="hidden" value="login" name="action"><td><input type="submit" class="button buttonBlack" value="Login">
-</table>
-</form>
-</div>-->
-
         <div class="body" ></div>
         <div class="grad"></div>
         <div class="header">

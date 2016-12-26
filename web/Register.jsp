@@ -20,10 +20,9 @@
                 var address = document.forms["myForm"]["CAddress"].value;
                 var phone = document.forms["myForm"]["CPhone"].value;
                 var cinumber = document.forms["myForm"]["CINumber"].value;
-                if (checkID(ID) == 0 || checkName(name) == 0 || checkPassword(pass, repass) == 0 || checkAddress(address) == 0 || checkPhone(phone) == 0 || checkIN(cinumber) == 0) {
+                if (checkID(ID) == 0 || checkPassword(pass, repass) == 0 || checkName(name) == 0 || checkPhone(phone) == 0 || checkAddress(address) == 0 || checkIN(cinumber) == 0) {
                     return false;
                 } else {
-                    alert("Register successfully!");
                     return true;
                 }
             }
@@ -31,11 +30,17 @@
                 if (ID == "") {
                     alert("ID not null");
                     return 0;
+                } else if (ID.length > 20) {
+                    alert("ID must less than 20 characters");
+                    return 0;
                 }
             }
             function checkName(name) {
                 if (name == "") {
                     alert("Full Name not null");
+                    return 0;
+                } else if (name.length > 20) {
+                    alert("Full Name must less than 20 characters");
                     return 0;
                 }
             }
@@ -46,11 +51,17 @@
                 } else if (pass != repass) {
                     alert("Password not equals to Re-Password");
                     return 0;
+                } else if (pass.length > 20 || pass.length < 6) {
+                    alert("Password must less than 20 characters and greater than 6 characters");
+                    return 0;
                 }
             }
             function checkPhone(phone) {
                 if (phone == "") {
                     alert("Phone Number not null");
+                    return 0;
+                } else if (phone.length > 11 || phone.length < 10) {
+                    alert("Phone number have 10 or 11 numbers");
                     return 0;
                 }
             }
@@ -58,11 +69,17 @@
                 if (address == "") {
                     alert("Address Number not null");
                     return 0;
+                } else if (address.length > 50) {
+                    alert("Address have a lot of characters");
+                    return 0;
                 }
             }
             function checkIN(IN) {
                 if (IN == "") {
                     alert("Identity Number not null");
+                    return 0;
+                } else if (IN.length != 9) {
+                    alert("Identity number have 9 numbers");
                     return 0;
                 }
             }
@@ -88,9 +105,11 @@
                         <div class="headerEdit">Identity Number</div>
 
                         <%if (check == null) {
-                            } else if(check.equals("exist")){
+                            } else if (check.equals("exist")) {
                                 out.print("<div class='sameAccount'>Account or IN already exist</div>");
-                            }%>
+                            }
+                            session.setAttribute("checkAccount", "");
+                        %>
                     </div>
                     <div class="col2Register">
                         <div class="valueEdit"><input type="text" class="editCarBlank" name="CName"></div>
@@ -102,6 +121,7 @@
                         <div class="valueEdit"><input type="number" class="editCarBlank" name="CINumber"></div>
                         <input type="hidden" value="Register" name="action">
                         <div class="buttonEdit2"><input type="submit" class="button buttonBlack" value="Register" style="font-size: 20px;"></div>
+                        <a href="homePage.jsp"><div class="buttonEdit2"><input type="button" class="button buttonBlack" value="Cancel" style="font-size: 20px;"></div></a>
                     </div>
                 </div>     
             </form>

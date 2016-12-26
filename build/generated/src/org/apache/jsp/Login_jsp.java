@@ -270,29 +270,6 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
             String check = (String) session.getAttribute("checkAccount");
         
       out.write("\n");
-      out.write("\n");
-      out.write("        <!--<div style=\"text-align: center; width: 300px; margin: auto;\">\n");
-      out.write("            <div>Login page</div>\n");
-      out.write("            <form method=\"post\" action=\"check\" name=\"myForm\" onsubmit=\"return checkInput()\">\n");
-      out.write("                <table>\n");
-      out.write("                    <tr><td>UserName<td><input type=\"text\" name=\"username\" value=\"lythanhhuy\">\n");
-      out.write("                    <tr><td>PassWord<td><input type=\"password\" name=\"password\" value=\"123456\">\n");
-      out.write("        ");
- /* if (check == null || check.equals("")) {
-
-            } else if (check.equals("wrongUsername")) {
-                out.print("<tr><td>Username not exist, Register for login<td>");
-            } else if (check.equals("wrongPass")) {
-                out.print("<tr><td>Password incorrect!<td>");
-            }
-            session.setAttribute("checkAccount", "");*/
-        
-      out.write("\n");
-      out.write("<tr><td><input type=\"hidden\" value=\"login\" name=\"action\"><td><input type=\"submit\" class=\"button buttonBlack\" value=\"Login\">\n");
-      out.write("</table>\n");
-      out.write("</form>\n");
-      out.write("</div>-->\n");
-      out.write("\n");
       out.write("        <div class=\"body\" ></div>\n");
       out.write("        <div class=\"grad\"></div>\n");
       out.write("        <div class=\"header\">\n");

@@ -33,16 +33,22 @@
                 if (name == "") {
                     alert("Car name not null");
                     return 0;
-                }Admin_Car_addCar
+                } else if (name.length > 20) {
+                    alert("Car name must less than 20 characters");
+                    return 0;
+                }
             }
             function checkPrice(price) {
                 if (price == "") {
                     alert("Price not null");
                     return 0;
+                } else if (price < 50) {
+                    alert("Price at least $50");
+                    return 0;
                 }
             }
             function checkDiscount(discount) {
-                if (discount >= 100) {
+                if (discount >= 100 || discount < 0) {
                     alert("Invalid! 0 < Discount < 100");
                     return 0;
                 }
@@ -51,8 +57,8 @@
                 if (seat == "") {
                     alert("A number of seats is not null");
                     return 0;
-                } else if (seat >= 50) {
-                    alert("Not correct! what is this car??? A lot of seats!");
+                } else if (seat >= 50 || seat < 1) {
+                    alert("Not correct a number of seats!");
                     return 0;
                 }
             }
@@ -62,15 +68,49 @@
                     return 0;
                 }
             }
-            function checkPassword() {
+            function checkEdit() {
                 var pass = document.forms["EditForm"]["AdPass"].value;
                 var repass = document.forms["EditForm"]["Re-AdPass"].value;
+                var phone = document.forms["EditForm"]["AdPhone"].value;
+                var address = document.forms["EditForm"]["AdAddress"].value;
+                var name = document.forms["EditForm"]["AdFName"].value;
+                if (checkFName(name) == 0 || checkPassword(pass,repass) == 0 || checkPhone(phone) == 0 || checkAddress(address) == 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            function checkPassword(pass,repass) {
                 if (pass != repass) {
                     alert("Password not equals to Re-Password");
                     return false;
-                } else {
-                    alert("Edit profile successful!");
-                    return true;
+                }else if(pass.length>20 || pass.length<6){
+                    alert("Password must less than 20 characters and greater than 6 characters");
+                    return 0;
+                }
+            }
+            function checkPhone(phone) {
+                if (phone != "") {
+                    if (phone.length > 11 || phone.length < 10) {
+                        alert("Phone number have 10 or 11 numbers");
+                        return 0;
+                    }
+                }
+            }
+            function checkAddress(address) {
+                if (address != "") {
+                    if (address.length > 50) {
+                        alert("Address have a lot of characters");
+                        return 0;
+                    }
+                }
+            }
+            function checkFName(name) {
+                if (name != "") {
+                    if (name.length > 20) {
+                        alert("Full Name must less than 20 characters");
+                        return 0;
+                    }
                 }
             }
 
@@ -228,7 +268,7 @@
                                     + "<div class='history tableCarList1'>"
                                     + "<form method='post' action='check'>"
                                     + "<input type='hidden' name='CarID' value='" + CarID + "'>"
-                                    + "<input type='hidden' value='Admin_Car_Edit' name='action'>"
+                                        + "<input type='hidden' value='Admin_Car_Edit' name='action'>"
                                     + "<input type='Submit' class='button buttonBlack' value='Edit'>"
                                     + "</form></div>");
                             if (Status.equals("A")) {
@@ -250,7 +290,7 @@
                                     + "<form method='post' action='check'>"
                                     + "<input type='hidden' name='CarID' value='" + CarID + "'>"
                                     + "<input type='hidden' value='Admin_Car_Delete' name='action'>"
-                                    + "<input type='Submit' class='button buttonBlack' value='Delete'>"
+                                    + "<input type='Submit' class='button buttonBlack' value='Delete' onclick=\"alert('Delete " + CarName + " success!')\">"
                                     + "</form></div>");
                             out.print("</div>");
                         }
@@ -373,7 +413,7 @@
                         }%><%else if (option.equals("Edit")) {%>
                     <div class="formEdit">
                         <div class="editHeader">Edit Admin Info</div>
-                        <form method="post" action="check" name="EditForm" onsubmit="return checkPassword()">
+                        <form method="post" action="check" name="EditForm" onsubmit="return checkEdit()">
                             <div class="rowEdit removeSpace">
                                 <div class="col1">
                                     <div class="headerEdit">Full Name</div>

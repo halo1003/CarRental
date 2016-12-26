@@ -33,7 +33,6 @@
                 }
             }
             function checkVote() {
-
                 var type = document.forms["rentButton"]["type"].value;
                 if (type == -1) {
                     alert("You must login first");
@@ -46,15 +45,49 @@
                     return true;
                 }
             }
-            function checkPassword() {
+            function checkEdit() {
                 var pass = document.forms["EditForm"]["CPass"].value;
                 var repass = document.forms["EditForm"]["Re-CPass"].value;
+                var phone = document.forms["EditForm"]["CPhone"].value;
+                var address = document.forms["EditForm"]["CAddress"].value;
+                var name = document.forms["EditForm"]["CFName"].value;
+                if ( checkPassword(pass,repass) == 0 || checkFName(name) == 0 || checkPhone(phone) == 0 || checkAddress(address) == 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            function checkPassword(pass,repass) {
                 if (pass != repass) {
                     alert("Password not equals to Re-Password");
                     return false;
-                } else {
-                    alert("Edit profile successful!");
-                    return true;
+                }else if(pass.length>20 || pass.length<6){
+                    alert("Password must less than 20 characters and greater than 6 characters");
+                    return 0;
+                }
+            }
+            function checkPhone(phone) {
+                if (phone != "") {
+                    if (phone.length > 11 || phone.length < 10) {
+                        alert("Phone number have 10 or 11 numbers");
+                        return 0;
+                    }
+                }
+            }
+            function checkAddress(address) {
+                if (address != "") {
+                    if (address.length > 50) {
+                        alert("Address have a lot of characters");
+                        return 0;
+                    }
+                }
+            }
+            function checkFName(name) {
+                if (name != "") {
+                    if (name.length > 20) {
+                        alert("Full Name must less than 20 characters");
+                        return 0;
+                    }
                 }
             }
         </script>
@@ -216,7 +249,7 @@
                     %>
                     <div class="formEditCustomer">
                         <div class="editHeader">Edit Customer Profile</div>
-                        <form method="post" action="check" name="EditForm" onsubmit="return checkPassword();">
+                        <form method="post" action="check" name="EditForm" onsubmit="return checkEdit();">
                             <div class="rowEdit removeSpace">
                                 <div class="col1">
                                     <div class="headerEdit">Pass</div>
